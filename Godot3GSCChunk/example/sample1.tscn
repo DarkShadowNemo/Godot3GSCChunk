@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/Godot3_GSC_Chunk/gsc_importer_plugin.gd" type="Script" id=1]
+
+[sub_resource type="SpatialMaterial" id=3]
+flags_unshaded = true
+flags_ensure_correct_normals = true
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+params_cull_mode = 2
+
+[node name="sample1" type="Spatial"]
+
+[node name="ImmediateGeometryExampleTEST" type="ImmediateGeometry" parent="."]
+material_override = SubResource( 3 )
+script = ExtResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.67676, 0.736203, 0, -0.736203, 0.67676, 0, 4.59183, 7.04136 )
